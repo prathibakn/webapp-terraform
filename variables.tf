@@ -1,11 +1,11 @@
  variable "aws_access_key" { 
    description = "AWS access key"
-   default = ""
+   default = "AKIAIYOZQ7HURJ2Q2I4A"
  }
 
  variable "aws_secret_key" { 
    description = "AWS secret access key"
-   default = ""
+   default = "tUcIxRIVjfvUkD5/e0FbyLkaVtO0FAD1WoW+WRK8"
  }
 
 variable "aws_region" { 
@@ -15,18 +15,18 @@ variable "aws_region" {
 
 variable "vpc_cidr" {
     description = "VPC CIDR"
-    default = "10.0.0.0/16"
+    default = "192.168.0.0/16"
 }
 
 variable "key_pair" {
-  default = "demoappkeypair"
+  default = "aws_demo"
 }
 
 variable "public_subnet_cidr" {
     description = "Public Subnet CIDR"
     default = {
-        ap-south-1a = "10.0.0.0/24"
-        ap-south-1b = "10.0.1.0/24"
+        ap-south-1a = "192.168.0.0/24"
+        ap-south-1b = "192.168.1.0/24"
     }    
 }
 
@@ -42,8 +42,8 @@ variable "az2" {
 variable "private_subnet_cidr" {
     description = "Private Subnet CIDR"
     default = {
-        ap-south-1a = "10.0.2.0/24"
-        ap-south-1b = "10.0.3.0/24"
+        ap-south-1a = "192.168.2.0/24"
+        ap-south-1b = "192.168.3.0/24"
     }    
 }
 

@@ -26,6 +26,7 @@ resource "aws_eip" "nat" {
 resource "aws_route" "main" {
   route_table_id         = "${aws_vpc.default.main_route_table_id}"
   destination_cidr_block = "0.0.0.0/0"
+ 
   nat_gateway_id         = "${aws_nat_gateway.ap_south_1b_nat_gateway.id}"
 }
 
