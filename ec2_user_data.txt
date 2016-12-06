@@ -1,0 +1,16 @@
+#!/bin/bash
+yum update -y
+yum install nginx -y
+cd /var
+mkdir www
+cd www
+mkdir html
+cd html
+touch index.html
+echo "Hello Tech-Conf!</b> This is the Demo site." >> index.html
+sudo su
+cd /etc/nginx/
+rm nginx.conf
+wget https://s3-ap-southeast-1.amazonaws.com/prathiba/nginx.conf
+sudo service nginx restart
+
