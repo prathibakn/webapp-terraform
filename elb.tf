@@ -15,7 +15,7 @@ resource "aws_elb" "demo_app_elb" {
     healthy_threshold = 2
     unhealthy_threshold = 2
     timeout = 5
-    target = "HTTP:80/srv/www/html/index.html"
+    target = "HTTP:80/"
     interval = 30
   }
   
